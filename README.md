@@ -1,2 +1,2 @@
 # libnogo
-Library for shared things between nogo client and server
+Library for shared code between nogo server and client.
