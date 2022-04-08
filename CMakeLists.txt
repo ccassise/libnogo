@@ -5,7 +5,7 @@ include(CTest)
 enable_testing()
 
 option(LIBNOGO_ENABLE_SANITIZERS "Compile with or without sanitizers" OFF)
-option(LIBNOGO_ENABLE_TESTS "Determine if tests should be included or not" ON)
+option(LIBNOGO_ENABLE_TESTS "Determine if tests will be ran with root project" ON)
 
 set(C_STD 99)
 set(SANITIZERS)
@@ -35,7 +35,7 @@ list(APPEND WFLAGS
 )
 
 if (${LIBNOGO_ENABLE_SANITIZERS})
-	message(STATUS "LIBNOGO: compiling with sanitizers")
+	message(STATUS "LIBNOGO: enabling sanitizers")
 	list(APPEND SANITIZERS
 		-fsanitize=address
 		-fsanitize=undefined

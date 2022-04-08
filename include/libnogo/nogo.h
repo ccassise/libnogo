@@ -73,11 +73,13 @@ char *nogo_board_str(NogoBoard *b);
 
 typedef enum {
 	NOGO_PRO_ERROR,
-	NOGO_PRO_LOGIN,
-	NOGO_PRO_LOGOUT,
+	NOGO_PRO_GOTMOVE,
 	NOGO_PRO_JOIN,
 	NOGO_PRO_LEAVE,
+	NOGO_PRO_LOGIN,
+	NOGO_PRO_LOGOUT,
 	NOGO_PRO_MOVE,
+	NOGO_PRO_OK,
 } NogoProtocolType;
 
 typedef struct NogoProtocol {
