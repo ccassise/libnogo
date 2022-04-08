@@ -11,7 +11,7 @@ A C compiler with C99 support. The library has only been built and tested on Lin
 ### Build and link
 As stated earlier the library is meant to be consumed by other cmake C projects. Specifically by adding to projects with `add_subdirectory()`.
 1. Download and place the folder inside of the project that will be using this library. Alternatively use something like `git submodule add` to copy the library into the project. These steps will assume it was placed in `lib/libnogo`.
-2. In the main CMakeLists.txt add `add_subdirectory(lib/libnogo)`. Add the previous line before any other executable/libraries that will use libnogo.
+2. In the main CMakeLists.txt before any executable/library that will use libnogo add `add_subdirectory(lib/libnogo)`.
 3. After `add_executable()` or equivalent, link the library with `target_link_libraries(<target> PRIVATE libnogo)`. See cmake documentation for a better description of this function.
 4. Include the header in any .c or .h file with `#include <libnogo/nogo.h>` and all symbols should be visible.
 
